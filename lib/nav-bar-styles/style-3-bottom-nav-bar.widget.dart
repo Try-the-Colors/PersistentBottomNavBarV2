@@ -26,8 +26,7 @@ class BottomNavStyle3 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Expanded(
-                    child: IconTheme(
+              IconTheme(
                       data: IconThemeData(
                           size: item.iconSize,
                           color: isSelected
@@ -39,11 +38,10 @@ class BottomNavStyle3 extends StatelessWidget {
                                   : item.inactiveColorPrimary),
                       child: isSelected ? item.icon : item.inactiveIcon ?? item.icon,
                     ),
-                  ),
                   item.title == null
                       ? SizedBox.shrink()
                       : Padding(
-                          padding: const EdgeInsets.only(top: 15.0),
+                          padding: const EdgeInsets.only(top: 3.0),
                           child: Material(
                             type: MaterialType.transparency,
                             child: DefaultTextStyle.merge(
@@ -60,8 +58,8 @@ class BottomNavStyle3 extends StatelessWidget {
                                               ? item.activeColorPrimary
                                               : item.activeColorSecondary)
                                           : item.inactiveColorPrimary,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 12.0),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 10.0),
                               child: FittedBox(child: Text(item.title!)),
                             ),
                           ),
@@ -152,3 +150,4 @@ class BottomNavStyle3 extends StatelessWidget {
     );
   }
 }
+
