@@ -36,7 +36,7 @@ class _BottomNavStyle13State extends State<BottomNavStyle13> with TickerProvider
           .animate(_animationControllerList[i]));
     }
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _animationControllerList[_selectedIndex!].forward();
     });
   }

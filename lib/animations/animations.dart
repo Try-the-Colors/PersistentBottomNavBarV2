@@ -49,7 +49,7 @@ class _OffsetAnimationState extends State<OffsetAnimation> with SingleTickerProv
   }
 
   _hideAnimation() {
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_hideNavigationBar!) {
         _navBarHideAnimationController.forward();
       } else {
